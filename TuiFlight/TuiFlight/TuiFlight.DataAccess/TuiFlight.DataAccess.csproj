@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>TuiFlightDataAccess</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TuiFlight.DataContext\TuiFlight.DataContext.csproj" />
+    <ProjectReference Include="..\TuiFlight.Model\TuiFlight.Model.csproj" />
+  </ItemGroup>
+
+</Project>

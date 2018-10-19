@@ -1,0 +1,42 @@
+﻿@model TuiFlightModel.Models.Travel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Travel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OneWay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OneWay)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnFlightId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReturnFlightId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReturnDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Traveller)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Traveller.CustomerId)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

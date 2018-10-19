@@ -1,0 +1,119 @@
+﻿body {
+}
+
+
+.label-70 {
+    width: 10%;
+    min-width: 50px;
+}
+
+.no-border {
+    border: 0px;
+    outline: 0px;
+
+    height: 10%;
+    min-height: 10px;
+}
+
+.align-middle {
+    padding-top: 2.5%;
+    padding-left: 0;
+}
+
+.box {
+    border-radius: 5px;
+    border: solid 1px #dfe4ea;
+    padding: 1.5%;
+    margin: 0.5%;
+    min-height: 130px;
+    height: 50%;
+}
+
+.box-1 {
+    border-radius: 5px;
+    border: solid 1px #dfe4ea;
+    padding-top: 1%;
+    margin: 0.5%;
+    min-height: 130px;
+    height: 50%;
+}
+
+.checkbox >label {
+    font-weight: bold;
+}
+
+.clear-fix {
+    clear:both;
+}
+
+.criteria {
+    margin: 1%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.flight {
+    background-color: #dfe4ea;
+    margin: 1%;
+    padding: 1%;
+}
+
+.flight-box {
+    height: 100%;
+    min-height: 80px;
+    margin: .5%;
+}
+
+.flight-times {
+    border-bottom: solid 1px #222f3e;
+}
+
+.rounded-box {
+    border-radius: 5px;
+}
+
+.action-box {
+    background-color: #192a56;
+    /*border: 1px solid green;*/
+    text-align: center;
+}
+
+.action-box a {
+    color: #fff;
+}
+
+.eco-box {
+    background-color: #54a0ff;
+    color: #fff;
+}
+
+#OutboundDate {
+    width: 80%;
+    border: 0;
+}
+
+.border-bottom-solid {
+    border-bottom: solid 2px #dfe4ea;
+}
+
+#createBtn {
+    background-color: #b33939;
+    color: #fff;
+    margin-left: -5%;
+    margin-top: 3%;
+    min-height: 130px;
+    width: 80%;
+}
+
+#bookBtn {
+    background-color: #b33939;
+    color: #fff;
+    min-height: 100px;
+    width: 100%;
+}

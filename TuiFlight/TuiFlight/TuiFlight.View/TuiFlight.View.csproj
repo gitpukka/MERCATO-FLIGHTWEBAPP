@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bootstrap.Datepicker" Version="1.8.0" />
+    <PackageReference Include="jQuery.UI.Combined" Version="1.12.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TuiFlight.Business\TuiFlight.Business.csproj" />
+    <ProjectReference Include="..\TuiFlight.DataAccess\TuiFlight.DataAccess.csproj" />
+    <ProjectReference Include="..\TuiFlight.DataContext\TuiFlight.DataContext.csproj" />
+    <ProjectReference Include="..\TuiFlight.Model\TuiFlight.Model.csproj" />
+  </ItemGroup>
+
+</Project>

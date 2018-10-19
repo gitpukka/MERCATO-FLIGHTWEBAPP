@@ -1,0 +1,48 @@
+﻿@model TuiFlightModel.Models.Travel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Travel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OutboundFlightId" />
+            <input type="hidden" asp-for="CustomerId" />
+            <input type="hidden" asp-for="OutboundDate" />
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="OneWay" /> @Html.DisplayNameFor(model => model.OneWay)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReturnFlightId" class="control-label"></label>
+                <input asp-for="ReturnFlightId" class="form-control" />
+                <span asp-validation-for="ReturnFlightId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReturnDate" class="control-label"></label>
+                <input asp-for="ReturnDate" class="form-control" />
+                <span asp-validation-for="ReturnDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

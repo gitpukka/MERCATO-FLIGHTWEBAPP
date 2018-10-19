@@ -1,0 +1,62 @@
+﻿@model IEnumerable<TuiFlight.View.ViewModel.BookingViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FlightName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OutboundDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TravellerFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TravellerLastName)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OutboundDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirportFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirportTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TravellerLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TravellerLastName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.FlightId }) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

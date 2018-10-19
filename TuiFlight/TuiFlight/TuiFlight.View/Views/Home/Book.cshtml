@@ -1,0 +1,76 @@
+﻿@model TuiFlight.View.ViewModel.BookingViewModel
+
+@{
+    ViewData["Title"] = "Book a flight";
+}
+
+<h2>Booking</h2>
+
+<hr />
+<div class="row">
+    <div class="col-lg-10">
+        <form asp-action="Book">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.HiddenFor(modelItem => modelItem.OutboundDate)
+            @Html.HiddenFor(modelItem => modelItem.ArrivalDate)
+            @Html.HiddenFor(modelItem => modelItem.FlightId)
+            <div class="row flight rounded-box">
+                <div class="col-lg-8 flight-box" style="">
+                    <div class="row flight-times clearfix">
+                        <div class="col-sm-4 float-left">@Html.DisplayFor(modelItem => modelItem.OutboundDate)<br />@Html.DisplayFor(modelItem => modelItem.AirportFrom) </div>
+                        <div class="col-sm-4 float-right">@Html.DisplayFor(modelItem => modelItem.ArrivalDate)<br />@Html.DisplayFor(modelItem => modelItem.AirportTo) </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">@Html.DisplayFor(modelItem => modelItem.FlightName)</div>
+                    </div>
+                </div>
+                <div class="col-lg-2 clearfix align-middle flight-box rounded-box eco-box" style="">
+                    <div class="col-sm-2 float-left">Economy</div>
+                    <div class="col-lm-3 float-right">247 $</div>
+                </div>
+            </div>
+            <div class="row flight rounded-box">
+                <div class="col-lg-7">
+                    <div class="row" style="">
+                        <div class="col-md-3">
+                            <label asp-for="TravellerFirstName" class="control-label" style=""></label>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="form-group" style="">
+                                <input asp-for="TravellerFirstName" class="form-control" />
+                                <span asp-validation-for="TravellerFirstName" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="">
+                        <div class="col-md-3">
+                            <label asp-for="TravellerLastName" class="control-label" style=""></label>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group" style="">
+                                <input asp-for="TravellerLastName" class="form-control" />
+                                <span asp-validation-for="TravellerLastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 clearfix">
+                    <div class="row float-right" style="">
+                        <div class="col-lg-12">
+                            <input id="bookBtn" type="submit" value="Book" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
